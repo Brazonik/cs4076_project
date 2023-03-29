@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <string>
 #include <QString>
+#include <QDebug>
 
 using namespace std;
 
@@ -14,11 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QPixmap pix("C:/Users/anikm/OneDrive/Pictures/Cooking-Recipe-PNG-Images.png");
-    //pix("C:/Users/anikm/OneDrive/Pictures/R.png");
     int width = ui->picture1->width();
     int height = ui->picture1->height();
-    int width2 = ui->picture2->width();
-    int height2 = ui->picture2->height();
     ui->picture1->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
 
     ui->comboBox->addItem("breakfast");
@@ -27,15 +25,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox->addItem("snack");
     ui->comboBox->addItem("drink");
 
+    ui->scrollArea->setWidgetResizable(true);
+    ui->textEdit->setText("Spot a little hottie when I flipped out the shade"
+                          "Lookin like a red Rari sittin in a driveway"
+                          "Bottle of Cîroc with a hint of Kool-Aid"
+                          "She done pulled up like I'm getting rid of weeds"
+                          "Are you tired from running through my mind?"
+                          "Take a break and we can have a good time"
+                          "Show you moves like I'm the new James Brown"
+                          "Me and you should get a room right now");
 
-
-   // ui->picture2->setPixmap(pix.scaled(width2, height2, Qt::KeepAspectRatio));
-
-
-    // pix("C:/Users/anikm/OneDrive/Pictures/R.png");
-    //int width2 = ui->picture2->width();
-    //int height2 = ui->picture2->height();
-    //ui->picture2->setPixmap(pix.scaled(width2, height2, Qt::KeepAspectRatio));
 }
 
 MainWindow::~MainWindow()
@@ -69,5 +68,29 @@ void MainWindow::on_comboBox_activated(int index)
 {
     QMessageBox::information(this, "Mo'Recipes","You must login to view");
 
+}
+
+
+void MainWindow::on_radioButton_clicked()
+{
+    if(ui->radioButton->isCheckable()){
+        QMessageBox::information(this, "Safety", "You are over 16. You will be fine");
+    }
+
+}
+
+
+void MainWindow::on_radioButton_2_clicked()
+{
+    if(ui->radioButton_2->isCheckable()){
+       QMessageBox::StandardButton answer = QMessageBox::question(this, "Safety", "Are you with a guardian",QMessageBox::Yes | QMessageBox::No);
+
+       if(answer== QMessageBox::No){
+           QApplication::quit();
+       } else {
+           qDebug()<<"You can proceed";
+       }
+
+    }
 }
 

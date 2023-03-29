@@ -21,6 +21,10 @@ private slots:
 
     void on_comboBox_activated(int index);
 
+    void on_radioButton_clicked();
+
+    void on_radioButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     secDialog *SecDialog;

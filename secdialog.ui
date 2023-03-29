@@ -6,40 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>350</width>
-    <height>150</height>
+    <width>600</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QFormLayout" name="formLayout">
-   <item row="0" column="0" colspan="2">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>2</number>
      </property>
      <property name="movable">
       <bool>true</bool>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Home</string>
+       <string>Dinner</string>
       </attribute>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
-       <string>Menu</string>
+       <string>Lunch</string>
       </attribute>
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>About</string>
+       <string>Snacks</string>
       </attribute>
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
-       <string>Contact</string>
+       <string>Dinner</string>
       </attribute>
      </widget>
     </widget>
