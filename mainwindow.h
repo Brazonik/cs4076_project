@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "secdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,8 +16,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_comboBox_activated(int index);
+
 private:
     Ui::MainWindow *ui;
-    /jhgyt
+    secDialog *SecDialog;
 };
 #endif // MAINWINDOW_H
