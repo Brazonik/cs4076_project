@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "secdialog.h"
+#include "about.h"
+#include "rate_us.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,8 +27,20 @@ private slots:
 
     void on_radioButton_2_clicked();
 
+    void on_actionContact_triggered();
+
+    void on_actionAout_triggered();
+
+    void on_actionAbout_triggered();
+
+    void on_horizontalSlider_actionTriggered(int action);
+
+    void on_actionRate_Us_triggered();
+
 private:
     Ui::MainWindow *ui;
     secDialog *SecDialog;
+    about *About;
+    rate_us *Rate_us;
 };
 #endif // MAINWINDOW_H

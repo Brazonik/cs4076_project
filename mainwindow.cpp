@@ -7,7 +7,6 @@
 #include <QString>
 #include <QDebug>
 
-using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -92,5 +91,39 @@ void MainWindow::on_radioButton_2_clicked()
        }
 
     }
+}
+
+
+void MainWindow::on_actionContact_triggered()
+{
+    QMessageBox::information(this, "Contact", "Number: xxx-xxx-xxx ");
+}
+
+
+void MainWindow::on_actionAout_triggered()
+{
+   QMessageBox::information(this, "Contact", "Email: xxxxxx@gmail.com ");
+}
+
+
+void MainWindow::on_actionAbout_triggered()
+{
+    About = new about(this);
+    About->show();
+}
+
+
+void MainWindow::on_horizontalSlider_actionTriggered(int action)
+{
+    if(ui->horizontalSlider->value() == 2){
+        QMessageBox::information(this,"Rating", "jyhsgfbh");
+    }
+}
+
+
+void MainWindow::on_actionRate_Us_triggered()
+{
+    Rate_us = new rate_us(this);
+    Rate_us->show();
 }
 

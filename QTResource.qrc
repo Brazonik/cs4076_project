@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/QTpics">
+        <file>QTPics/R.png</file>
+        <file>QTPics/Cooking-Recipe-PNG-Images.png</file>
+        <file>QTPics/background.jfif</file>
+        <file>QTPics/curryPic.jpg</file>
+        <file>QTPics/background2.jfif</file>
+        <file>QTPics/white background.jfif</file>
+        <file>QTPics/curry.jfif</file>
+        <file>QTPics/pancakes.jfif</file>
+        <file>QTPics/rat.jfif</file>
+        <file>QTPics/scrambled.jfif</file>
+        <file>QTPics/noodle.jfif</file>
+        <file>QTPics/siup.jfif</file>
+        <file>QTPics/black.jfif</file>
+        <file>QTPics/grey.jfif</file>
+        <file>QTPics/grey2.jfif</file>
+        <file>QTPics/profile.jfif</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
